@@ -43,7 +43,7 @@
         .hero-header {
             position: relative;
             background: linear-gradient(135deg, #1a0000 0%, var(--burgundy) 40%, var(--red) 100%);
-            padding: 5rem 2rem 8rem;
+            padding: 4rem 1.5rem 6rem;
             text-align: center;
             overflow: hidden;
         }
@@ -58,78 +58,78 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
             flex-wrap: wrap;
         }
         .hero-logo {
-            height: 120px;
+            height: 90px;
             border-radius: 16px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.5);
             transition: transform 0.3s;
             background: rgba(255,255,255,0.95);
-            padding: 8px;
+            padding: 6px;
         }
         .hero-logo:hover { transform: scale(1.08) rotate(-2deg); }
         .hero-logo.round { border-radius: 50%; }
         h1.hero-title {
-            font-size: clamp(2.2rem, 6vw, 4rem);
+            font-size: clamp(1.8rem, 6vw, 4rem);
             font-weight: 900;
             color: #fff;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             text-shadow: 0 4px 20px rgba(0,0,0,0.6);
             margin-bottom: .5rem;
         }
         .hero-sub {
-            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-size: clamp(0.85rem, 2.5vw, 1.5rem);
             color: var(--gold);
             font-weight: 700;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             text-transform: uppercase;
             margin-bottom: 1rem;
         }
         .hero-motto {
-            font-size: 1.1rem;
+            font-size: clamp(0.85rem, 2vw, 1.1rem);
             opacity: 0.85;
             font-style: italic;
         }
         .hero-tags {
-            margin-top: 1.5rem;
+            margin-top: 1.25rem;
             display: flex;
-            gap: .75rem;
+            gap: .5rem;
             justify-content: center;
             flex-wrap: wrap;
         }
         .hero-tag {
             background: rgba(255,255,255,0.12);
             backdrop-filter: blur(10px);
-            padding: 0.5rem 1.2rem;
+            padding: 0.4rem 1rem;
             border-radius: 30px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 500;
             border: 1px solid rgba(255,255,255,0.15);
         }
 
         /* ======== CONTAINER ======== */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
 
         /* ======== SECTION HEADINGS ======== */
         .section-heading {
             text-align: center;
-            margin: 5rem 0 3rem;
+            margin: 3.5rem 0 2rem;
         }
         .section-heading h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(1.6rem, 4vw, 3rem);
             font-weight: 800;
             color: var(--gold);
             display: inline-flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.75rem;
         }
         .section-heading h2::before, .section-heading h2::after {
             content: '';
-            width: 60px;
+            width: 40px;
             height: 2px;
             background: linear-gradient(90deg, transparent, var(--red));
         }
@@ -138,15 +138,15 @@
         }
         .section-heading p {
             color: var(--text-dim);
-            margin-top: .75rem;
-            font-size: 1.05rem;
+            margin-top: .5rem;
+            font-size: 0.95rem;
         }
 
         /* ======== PRODUCT CARDS ======== */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
         }
         .product-card {
             background: var(--surface);
@@ -159,18 +159,14 @@
             transition: transform .3s ease, border-color .3s ease;
         }
         .product-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-6px);
             border-color: var(--gold);
         }
         .product-card.wide {
             grid-column: span 2;
         }
-        @media (max-width: 768px) {
-            .product-card.wide { grid-column: span 1; }
-            .products-grid { grid-template-columns: 1fr; }
-        }
 
-        /* Image Carousel */
+        /* ======== IMAGE CAROUSEL ======== */
         .card-carousel {
             position: relative;
             overflow: hidden;
@@ -189,11 +185,11 @@
         }
         .carousel-nav {
             position: absolute;
-            bottom: 12px;
+            bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 8px;
+            gap: 6px;
         }
         .carousel-dot {
             width: 10px; height: 10px;
@@ -220,13 +216,14 @@
             justify-content: center;
             opacity: 0;
             transition: opacity .3s;
+            z-index: 5;
         }
         .card-carousel:hover .carousel-btn { opacity: 1; }
-        .carousel-btn.prev { left: 10px; }
-        .carousel-btn.next { right: 10px; }
+        .carousel-btn.prev { left: 8px; }
+        .carousel-btn.next { right: 8px; }
 
         /* Card Body */
-        .card-body { padding: 1.5rem 2rem 2rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-body { padding: 1.25rem 1.5rem 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
         .card-badge {
             display: inline-block;
             background: var(--red);
@@ -237,43 +234,43 @@
             letter-spacing: 1px;
             padding: 4px 12px;
             border-radius: 20px;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.6rem;
             align-self: flex-start;
         }
         .card-badge.eco { background: var(--green-deep); }
         .card-badge.new { background: var(--teal); }
         .card-title {
-            font-size: 1.6rem;
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
             font-weight: 800;
             color: #fff;
-            margin-bottom: .75rem;
+            margin-bottom: .6rem;
         }
         .card-desc {
             color: var(--text-dim);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            margin-bottom: 1.2rem;
             flex-grow: 1;
         }
         .card-specs {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: .5rem;
+            gap: .4rem;
         }
         .spec {
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             color: var(--text-dim);
             background: var(--surface-2);
-            padding: 6px 10px;
+            padding: 6px 8px;
             border-radius: 8px;
             border: 1px solid rgba(255,255,255,0.05);
         }
-        .spec strong { color: var(--text); display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+        .spec strong { color: var(--text); display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
 
         /* ======== PRICING SECTION ======== */
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.25rem;
             margin-top: 2rem;
             align-items: stretch;
         }
@@ -281,7 +278,7 @@
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: var(--radius);
-            padding: 2.5rem 2rem;
+            padding: 2rem 1.5rem;
             text-align: center;
             position: relative;
             transition: transform .3s, border-color .3s;
@@ -291,53 +288,53 @@
             border: 2px solid var(--gold);
             background: linear-gradient(170deg, var(--surface), #1a1500);
             box-shadow: 0 0 60px rgba(218,165,32,0.1);
-            transform: scale(1.03);
+            transform: scale(1.02);
         }
-        .price-card.highlight:hover { transform: scale(1.03) translateY(-6px); }
+        .price-card.highlight:hover { transform: scale(1.02) translateY(-6px); }
         .price-label {
             position: absolute;
             top: -14px; left: 50%;
             transform: translateX(-50%);
             background: var(--gold);
             color: #000;
-            padding: 4px 18px;
+            padding: 4px 16px;
             border-radius: 20px;
             font-weight: 800;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             white-space: nowrap;
         }
         .price-tier {
-            font-size: 1rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 3px;
             color: var(--text-dim);
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
         .price-amount {
             font-family: 'Outfit', sans-serif;
-            font-size: 3.2rem;
+            font-size: clamp(2.4rem, 5vw, 3.2rem);
             font-weight: 900;
             color: #fff;
         }
-        .price-amount small { font-size: 1.4rem; opacity: .6; }
+        .price-amount small { font-size: 1.2rem; opacity: .6; }
         .price-items {
             list-style: none;
-            margin: 1.5rem 0;
+            margin: 1.25rem 0;
             text-align: left;
         }
         .price-items li {
-            padding: .6rem 0;
+            padding: .5rem 0;
             border-bottom: 1px solid rgba(255,255,255,0.04);
-            font-size: .95rem;
+            font-size: .88rem;
             color: #ccc;
         }
         .price-items li::before {
             content: '✓';
             color: var(--red);
-            margin-right: 10px;
+            margin-right: 8px;
             font-weight: bold;
         }
 
@@ -345,7 +342,7 @@
         .avulso-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
             background: var(--surface);
             border-radius: var(--radius);
             overflow: hidden;
@@ -354,65 +351,66 @@
         .avulso-table th {
             background: var(--burgundy);
             color: #fff;
-            padding: 1rem 1.5rem;
+            padding: 0.8rem 1rem;
             text-align: left;
             font-weight: 700;
-            font-size: 0.85rem;
+            font-size: 0.78rem;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
         .avulso-table td {
-            padding: .85rem 1.5rem;
+            padding: .7rem 1rem;
             border-bottom: 1px solid rgba(255,255,255,0.04);
             color: #ddd;
+            font-size: 0.88rem;
         }
         .avulso-table tr:hover td { background: rgba(226,6,19,0.05); }
         .avulso-table .price-cell {
             font-weight: 800;
             font-family: 'Outfit', sans-serif;
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             color: var(--gold);
         }
 
         /* ======== SUPPLIERS ======== */
         .suppliers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.5rem;
         }
         .supplier-card {
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: var(--radius);
-            padding: 1.5rem;
+            padding: 1.25rem;
             transition: border-color .3s;
         }
         .supplier-card:hover { border-color: var(--gold); }
         .supplier-cat {
-            font-size: 0.7rem;
+            font-size: 0.68rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--red);
             font-weight: 700;
-            margin-bottom: .75rem;
+            margin-bottom: .6rem;
         }
         .supplier-name {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             font-weight: 700;
             color: #fff;
-            margin-bottom: .3rem;
+            margin-bottom: .2rem;
         }
-        .supplier-detail { color: var(--text-dim); font-size: 0.88rem; }
+        .supplier-detail { color: var(--text-dim); font-size: 0.85rem; }
         .supplier-highlight {
             display: inline-block;
-            margin-top: .5rem;
+            margin-top: .4rem;
             background: rgba(218,165,32,0.1);
             color: var(--gold);
             padding: 3px 10px;
             border-radius: 12px;
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             font-weight: 600;
         }
 
@@ -421,24 +419,24 @@
             background: linear-gradient(135deg, rgba(27,67,50,0.3), rgba(0,139,139,0.1));
             border: 1px solid rgba(0,139,139,0.3);
             border-radius: var(--radius);
-            padding: 2rem;
-            margin: 3rem 0;
+            padding: 1.5rem;
+            margin: 2.5rem 0;
         }
-        .tip-box h3 { color: var(--teal); font-size: 1.3rem; margin-bottom: 1rem; }
+        .tip-box h3 { color: var(--teal); font-size: 1.2rem; margin-bottom: .75rem; }
         .tip-box ul { list-style: none; }
         .tip-box li {
-            padding: .4rem 0;
+            padding: .35rem 0;
             color: #bbb;
-            font-size: .95rem;
+            font-size: .88rem;
         }
         .tip-box li::before { content: '💡 '; }
         .warning-box {
             background: linear-gradient(135deg, rgba(139,0,0,0.2), rgba(226,6,19,0.05));
             border: 1px solid rgba(226,6,19,0.3);
             border-radius: var(--radius);
-            padding: 1.5rem 2rem;
-            margin: 2rem 0;
-            font-size: 0.95rem;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
             color: #ff9999;
         }
         .warning-box strong { color: var(--red); }
@@ -447,9 +445,9 @@
         footer {
             background: #060606;
             border-top: 1px solid var(--border);
-            padding: 3rem 2rem;
+            padding: 2.5rem 1.5rem;
             text-align: center;
-            margin-top: 5rem;
+            margin-top: 4rem;
         }
         .footer-heart {
             color: var(--red);
@@ -460,18 +458,18 @@
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.15); }
         }
-        .footer-motto { color: var(--text-dim); font-size: 0.85rem; margin-top: .75rem; }
+        .footer-motto { color: var(--text-dim); font-size: 0.8rem; margin-top: .5rem; }
 
         /* ======== CTA ======== */
-        .cta-section { text-align: center; margin: 4rem 0; }
+        .cta-section { text-align: center; margin: 3rem 0; }
         .btn {
             display: inline-block;
             background: var(--red);
             color: #fff;
-            padding: 16px 48px;
+            padding: 14px 40px;
             border-radius: 40px;
             font-weight: 800;
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             transition: all .3s;
@@ -484,6 +482,95 @@
             transform: translateY(-3px);
             box-shadow: 0 12px 30px rgba(226,6,19,0.45);
         }
+
+        /* ======== MOBILE-FIRST RESPONSIVE ======== */
+        @media (max-width: 768px) {
+            .hero-header {
+                padding: 2.5rem 1rem 4rem;
+            }
+            .hero-logo {
+                height: 60px;
+                padding: 4px;
+            }
+            .hero-logos {
+                gap: 1rem;
+            }
+            .hero-tags {
+                gap: .4rem;
+            }
+            .hero-tag {
+                font-size: 0.72rem;
+                padding: 0.3rem 0.7rem;
+            }
+            .product-card.wide { grid-column: span 1; }
+            .products-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+            .card-body { padding: 1rem 1.25rem 1.25rem; }
+            .card-specs { grid-template-columns: 1fr 1fr; gap: .35rem; }
+            .spec { font-size: 0.72rem; padding: 5px 7px; }
+            .spec strong { font-size: 0.68rem; }
+            .pricing-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .price-card { padding: 1.5rem 1.25rem; }
+            .price-card.highlight { transform: none; }
+            .price-card.highlight:hover { transform: translateY(-4px); }
+            .suppliers-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .section-heading { margin: 2.5rem 0 1.5rem; }
+            .section-heading h2::before, .section-heading h2::after { width: 25px; }
+            .carousel-btn { opacity: 1; width: 32px; height: 32px; font-size: 1rem; }
+            .btn { padding: 12px 32px; font-size: 0.95rem; }
+            .tip-box { padding: 1.25rem; }
+            .tip-box li { font-size: 0.82rem; }
+            .container { padding: 0 0.75rem; }
+            .kit-banner-wrap { margin-top: -30px !important; padding: 0 0.75rem !important; }
+            .kit-banner-wrap img { border-radius: 12px !important; }
+
+            /* Table responsive */
+            .avulso-table { font-size: 0.8rem; }
+            .avulso-table th, .avulso-table td { padding: .5rem .6rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-header {
+                padding: 2rem 0.75rem 3rem;
+            }
+            .hero-logo {
+                height: 50px;
+            }
+            h1.hero-title {
+                letter-spacing: 1px;
+            }
+            .hero-sub {
+                letter-spacing: 2px;
+            }
+            .card-specs { grid-template-columns: 1fr; }
+            .carousel-track img {
+                aspect-ratio: 1/1;
+            }
+            .price-items li {
+                font-size: 0.82rem;
+                padding: .4rem 0;
+            }
+            .avulso-table .price-cell { font-size: 0.9rem; }
+        }
+
+        /* ======== SWIPE SUPPORT FOR MOBILE ======== */
+        @media (hover: none) and (pointer: coarse) {
+            .carousel-btn { opacity: 0.8; }
+        }
+
+        /* ======== SMOOTH ANIMATIONS ======== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .product-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        .product-card:nth-child(2) { animation-delay: 0.1s; }
+        .product-card:nth-child(3) { animation-delay: 0.2s; }
+        .product-card:nth-child(4) { animation-delay: 0.3s; }
+        .product-card:nth-child(5) { animation-delay: 0.4s; }
+        .product-card:nth-child(6) { animation-delay: 0.5s; }
+        .product-card:nth-child(7) { animation-delay: 0.6s; }
     </style>
 </head>
 <body>
@@ -492,8 +579,7 @@
 <header class="hero-header">
     <div class="hero-content">
         <div class="hero-logos">
-            <img src="imagens/logo_oficial_moot.png" alt="Logo 2º MOOT Nacional Pioneiro" class="hero-logo">
-            <img src="imagens/logo_mg_v3.png" alt="Logo MG Personalizada" class="hero-logo round">
+            <img src="./imagens/logo_mg_v3.png" alt="Logo MG Personalizada" class="hero-logo round">
         </div>
         <h1 class="hero-title">Enxoval Minas Gerais</h1>
         <div class="hero-sub">2º MOOT Nacional Pioneiro 2026</div>
@@ -509,8 +595,8 @@
 </header>
 
 <!-- ========== KIT HERO BANNER ========== -->
-<div style="max-width:1200px; margin:-50px auto 0; padding:0 1.5rem; position:relative; z-index:10;">
-    <img src="imagens/kit_completo_final.png" alt="Kit Completo — Enxoval MG 2026" style="width:100%; border-radius:16px; box-shadow: 0 20px 60px rgba(0,0,0,0.7); border: 2px solid #333; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='#DAA520'" onmouseout="this.style.transform=''; this.style.borderColor='#333'">
+<div class="kit-banner-wrap" style="max-width:1200px; margin:-40px auto 0; padding:0 1rem; position:relative; z-index:10;">
+    <img src="./imagens/kit_completo_novo.png" alt="Kit Completo — Enxoval MG 2026 com todos os itens" style="width:100%; border-radius:16px; box-shadow: 0 20px 60px rgba(0,0,0,0.7); border: 2px solid #333; transition: transform 0.3s, border-color 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='#DAA520'" onmouseout="this.style.transform=''; this.style.borderColor='#333'">
 </div>
 
 <div class="container">
@@ -524,11 +610,11 @@
     <div class="products-grid">
 
         <!-- ===== MOLETOM ===== -->
-        <div class="product-card">
+        <div class="product-card" id="moletom">
             <div class="card-carousel" data-carousel>
                 <div class="carousel-track">
-                    <img src="imagens/moletom_frente_1780412127921.png" alt="Moletom Frente">
-                    <img src="imagens/moletom_costas_1780412139460.png" alt="Moletom Costas">
+                    <img src="./imagens/moletom_frente_novo.png" alt="Moletom Frente — Distintivo no peito">
+                    <img src="./imagens/Moletom Costas - Pioneiros e Escotismo.png" alt="Moletom Costas — Pioneiros e Escotismo">
                 </div>
                 <button class="carousel-btn prev" aria-label="Anterior">‹</button>
                 <button class="carousel-btn next" aria-label="Próximo">›</button>
@@ -537,22 +623,17 @@
             <div class="card-body">
                 <span class="card-badge">Peça principal</span>
                 <h3 class="card-title">🧥 Moletom Canguru</h3>
-                <p class="card-desc">Borgonha profundo com a logo personalizada MG no peito e o mapa cultural estilizado de Minas nas costas. Perfeito para a Serra Gaúcha em julho!</p>
-                <div class="card-specs">
-                    <div class="spec"><strong>Tecido</strong>Moletom flanelado 300g/m²</div>
-                    <div class="spec"><strong>Estampa</strong>DTF / Bordado (frente)</div>
-                    <div class="spec"><strong>Cor</strong>Borgonha (#8B0000)</div>
-                    <div class="spec"><strong>Tamanhos</strong>P ao XGG</div>
-                </div>
+                <p class="card-desc">Borgonha profundo com o distintivo oficial MG bordado no peito esquerdo. Nas costas: flor-de-lis, bordões cruzados, fogueira, montanhas e o lema "SEMPRE ALERTA" — representando os Pioneiros de Minas. Perfeito para a Serra Gaúcha em julho!</p>
+
             </div>
         </div>
 
         <!-- ===== CAMISA ===== -->
-        <div class="product-card">
+        <div class="product-card" id="camisa">
             <div class="card-carousel" data-carousel>
                 <div class="carousel-track">
-                    <img src="imagens/camisa_frente_1780412086775.png" alt="Camisa Frente">
-                    <img src="imagens/camisa_costas_1780412099272.png" alt="Camisa Costas">
+                    <img src="./imagens/camisa_frente_novo.png" alt="Camisa Frente — Distintivo e Pão de Queijo">
+                    <img src="./imagens/camisa_costas_nova.png" alt="Camisa Costas — Cultura Mineira completa">
                 </div>
                 <button class="carousel-btn prev" aria-label="Anterior">‹</button>
                 <button class="carousel-btn next" aria-label="Próximo">›</button>
@@ -561,92 +642,66 @@
             <div class="card-body">
                 <span class="card-badge">Essencial</span>
                 <h3 class="card-title">👕 Camisa Pioneira</h3>
-                <p class="card-desc">O triângulo de MG imponente na frente e a clássica "É TREM BÃO DEMAIS, SÔ!" nas costas com ícones barrocos e a vibe mineira.</p>
-                <div class="card-specs">
-                    <div class="spec"><strong>Tecido</strong>Malha penteada 30.1</div>
-                    <div class="spec"><strong>Estampa</strong>Silk Screen / DTF</div>
-                    <div class="spec"><strong>Cor</strong>Borgonha (#8B0000)</div>
-                    <div class="spec"><strong>Tamanhos</strong>PP ao XGG</div>
-                </div>
+                <p class="card-desc">Design completo! Na frente: distintivo oficial no peito esquerdo e o mascote Pão de Queijo escoteiro no canto inferior direito. Elementos sutis de queijo, café e gírias mineiras espalhados. Nas costas: "É TREM BÃO DEMAIS, SÔ!" com ilustração de pão de queijo, café, queijo minas, montanhas, igreja barroca e gírias como "UAI", "NÓ", "CAIXIM", "TREM".</p>
+
             </div>
         </div>
 
         <!-- ===== DISTINTIVO ===== -->
-        <div class="product-card">
+        <div class="product-card" id="distintivos">
             <div class="card-carousel" data-carousel>
                 <div class="carousel-track">
-                    <img src="imagens/distintivo_v3.png" alt="Distintivo Bordado v3">
+                    <img src="./imagens/distintivo_v3.png" alt="Distintivo Oficial — Formato quadrado bordado">
                 </div>
             </div>
             <div class="card-body">
                 <span class="card-badge">Colecionável</span>
                 <h3 class="card-title">🏅 Distintivo Oficial</h3>
-                <p class="card-desc">Formato quadrado com cantos arredondados (8×8 cm) baseado na logo oficial do MOOT personalizada com elementos mineiros. Bordado premium com fio dourado.</p>
-                <div class="card-specs">
-                    <div class="spec"><strong>Formato</strong>Squircle 8×8 cm</div>
-                    <div class="spec"><strong>Tipo</strong>Bordado computadorizado</div>
-                    <div class="spec"><strong>Borda</strong>Merrow dourado</div>
-                    <div class="spec"><strong>Fixação</strong>Termocolante + costura</div>
-                </div>
+                <p class="card-desc">
+                    Formato quadrado com cantos arredondados (8×8 cm), baseado na logo oficial do MOOT personalizada com elementos mineiros. Bordado premium com fio dourado.
+                </p>
+
             </div>
         </div>
 
         <!-- ===== CANECA POLIPROPILENO ===== -->
-        <div class="product-card">
+        <div class="product-card" id="caneca">
             <div class="card-carousel" data-carousel>
                 <div class="carousel-track">
-                    <img src="imagens/caneca_polipropileno.png" alt="Caneca Polipropileno">
+                    <img src="./imagens/caneca_polipropileno.png" alt="Caneca Polipropileno">
                 </div>
             </div>
             <div class="card-body">
                 <span class="card-badge eco">🌱 Prático & Resistente</span>
                 <h3 class="card-title">☕ Caneca "Uai, Sô!"</h3>
                 <p class="card-desc">Caneca de polipropileno (plástico resistente) — leve, não quebra e cabe no bolso! Com o mapa ilustrado de MG, ícones culturais e o clássico "UAI, SÔ!". Perfeita pro cafézim no acampamento.</p>
-                <div class="card-specs">
-                    <div class="spec"><strong>Material</strong>Polipropileno (PP)</div>
-                    <div class="spec"><strong>Capacidade</strong>350ml</div>
-                    <div class="spec"><strong>Impressão</strong>Serigrafia / IML</div>
-                    <div class="spec"><strong>Vantagem</strong>Não quebra! BPA Free</div>
-                </div>
+
             </div>
         </div>
 
-        <!-- ===== ECO COPO VERMELHO + TIRANTE ===== -->
-        <div class="product-card wide">
+        <!-- ===== ECO COPO + CORDÃO ===== -->
+        <div class="product-card wide" id="eco-copos">
             <div class="card-carousel" data-carousel>
                 <div class="carousel-track">
-                    <img src="imagens/eco_copo_vermelho_v2.png" alt="Eco Copo Vermelho MG" style="object-fit: contain; background: #fff;">
-                    <img src="imagens/cordao_tirante_vermelho.png" alt="Sistema Completo MEU ECO COPO com Cordão" style="object-fit: contain; background: #fff;">
+                    <img src="./imagens/eco_copo_vermelho_novo.png" alt="Eco Copo Vermelho MG com cordão" style="object-fit: contain; background: #fff;">
                 </div>
-                <button class="carousel-btn prev" aria-label="Anterior">‹</button>
-                <button class="carousel-btn next" aria-label="Próximo">›</button>
-                <div class="carousel-nav"></div>
             </div>
             <div class="card-body">
                 <span class="card-badge eco">🌱 Meu Eco Copo</span>
-                <h3 class="card-title">🥤 Eco Copo Vermelho + Cordão</h3>
+                <h3 class="card-title">🥤 Eco Copo + Cordão</h3>
                 <p class="card-desc">
-                    Copo reutilizável de polipropileno na cor <strong>VERMELHA</strong> com serigrafia em branco.
-                    Traz o triângulo de MG, montanhas da Serra do Espinhaço, o lema <em>"LIBERTAS QUÆ SERA TAMEN"</em>,
-                    "MINAS GERAIS • 2º MOOT NACIONAL PIONEIRO 2026", logo Scouts Brasil, flor-de-lis, e ícones do pão de queijo e café.
-                    Acompanha <strong>cordão/tirante</strong> vermelho com texto branco + anel de silicone conector. Modelo <strong>MEU ECO COPO</strong>.
+                    PP vermelho com serigrafia branca: triângulo de MG, montanhas, flor-de-lis, lema "LIBERTAS QUÆ SERA TAMEN", ícones de pão de queijo e café.<br>
+                    Acompanha <strong>cordão/tirante</strong> vermelho com texto "uai uai, escoteiros de Minas" + anel de silicone conector. Modelo <strong>MEU ECO COPO</strong>.
                 </p>
-                <div class="card-specs">
-                    <div class="spec"><strong>Copo</strong>PP vermelho, 350ml</div>
-                    <div class="spec"><strong>Impressão</strong>Serigrafia branca</div>
-                    <div class="spec"><strong>Cordão</strong>Poliéster 2,5cm × 85cm</div>
-                    <div class="spec"><strong>Anel</strong>Silicone flexível</div>
-                    <div class="spec"><strong>Modelo</strong>MEU ECO COPO</div>
-                    <div class="spec"><strong>Conceito</strong>Reduz 80% de resíduos</div>
-                </div>
+
             </div>
         </div>
 
         <!-- ===== ECOCHILA / SACOCHILA ===== -->
-        <div class="product-card wide">
+        <div class="product-card wide" id="ecochila">
             <div class="card-carousel" data-carousel>
                 <div class="carousel-track">
-                    <img src="imagens/ecochila_mg.png" alt="Ecochila MG - Trem de Guardar os Trem" style="object-fit: contain; background: #fff;">
+                    <img src="./imagens/ecochila_mg.png" alt="Ecochila MG - Trem de Guardar os Trem" style="object-fit: contain; background: #fff;">
                 </div>
             </div>
             <div class="card-body">
@@ -657,14 +712,7 @@
                     Design inspirado na cultura mineira: uma ilustração estilizada com montanhas, triângulo de MG, forquilha escoteira e a expressão
                     <strong>"TREM DE GUARDAR OS TREM"</strong> em tipografia vintage. Ideal para carregar os itens do kit, usar no evento como mochila leve, ou levar pra vida!
                 </p>
-                <div class="card-specs">
-                    <div class="spec"><strong>Material</strong>TNT ou algodão cru</div>
-                    <div class="spec"><strong>Dimensões</strong>35×42 cm aprox.</div>
-                    <div class="spec"><strong>Cores</strong>Máximo 2 (base + estampa)</div>
-                    <div class="spec"><strong>Impressão</strong>Silk screen 1 cor</div>
-                    <div class="spec"><strong>Cordão</strong>Poliéster ou algodão</div>
-                    <div class="spec"><strong>Sugestão Arte</strong>Montanhas + triângulo MG + "TREM DE GUARDAR OS TREM"</div>
-                </div>
+
             </div>
         </div>
 
@@ -678,9 +726,9 @@
 
     <div class="pricing-grid">
         <!-- Essencial -->
-        <div class="price-card">
+        <div class="price-card" id="kit-essencial">
             <div class="price-tier">Kit Essencial</div>
-            <div class="price-amount">R$ 109<small>,90</small></div>
+            <div class="price-amount">R$ 119<small>,90</small></div>
             <ul class="price-items">
                 <li>Camisa Pioneira</li>
                 <li>Distintivo Oficial 8×8 cm</li>
@@ -690,10 +738,10 @@
         </div>
 
         <!-- Completo -->
-        <div class="price-card highlight">
+        <div class="price-card highlight" id="kit-completo">
             <div class="price-label">⭐ Mais Escolhido</div>
             <div class="price-tier">Kit Completo</div>
-            <div class="price-amount">R$ 249<small>,90</small></div>
+            <div class="price-amount">R$ 259<small>,90</small></div>
             <ul class="price-items">
                 <li>Moletom Canguru</li>
                 <li>Camisa Pioneira</li>
@@ -706,9 +754,9 @@
         </div>
 
         <!-- Intermediário -->
-        <div class="price-card">
+        <div class="price-card" id="kit-intermediario">
             <div class="price-tier">Kit Intermediário</div>
-            <div class="price-amount">R$ 189<small>,90</small></div>
+            <div class="price-amount">R$ 199<small>,90</small></div>
             <ul class="price-items">
                 <li>Moletom Canguru</li>
                 <li>Camisa Pioneira</li>
@@ -728,7 +776,6 @@
             <tr>
                 <th>Item</th>
                 <th>Material</th>
-                <th>Custo Estimado</th>
                 <th>Preço de Venda</th>
             </tr>
         </thead>
@@ -736,173 +783,48 @@
             <tr>
                 <td>🧥 Moletom Canguru</td>
                 <td>Moletom flanelado 300g</td>
-                <td>R$ 60 – R$ 80</td>
                 <td class="price-cell">R$ 130,00</td>
             </tr>
             <tr>
                 <td>👕 Camisa Pioneira</td>
                 <td>Malha penteada 30.1</td>
-                <td>R$ 28 – R$ 40</td>
                 <td class="price-cell">R$ 60,00</td>
             </tr>
             <tr>
                 <td>🏅 Distintivo 8×8 cm</td>
                 <td>Bordado computadorizado</td>
-                <td>R$ 8 – R$ 14</td>
-                <td class="price-cell">R$ 22,00</td>
+                <td class="price-cell">R$ 20,00</td>
+            </tr>
+            <tr>
+                <td>📌 Distintivo Simples</td>
+                <td>Bordado simples</td>
+                <td class="price-cell">R$ 5,50</td>
             </tr>
             <tr>
                 <td>☕ Caneca "Uai, Sô!"</td>
                 <td>Polipropileno (PP) 350ml</td>
-                <td>R$ 6 – R$ 12</td>
-                <td class="price-cell">R$ 25,00</td>
+                <td class="price-cell">R$ 15,00</td>
             </tr>
             <tr>
                 <td>🥤 Eco Copo + Cordão</td>
                 <td>PP vermelho + poliéster</td>
-                <td>R$ 12 – R$ 20</td>
-                <td class="price-cell">R$ 35,00</td>
+                <td class="price-cell">R$ 20,00</td>
             </tr>
             <tr>
                 <td>🎒 Ecochila / Sacochila</td>
                 <td>TNT ou algodão cru</td>
-                <td>R$ 5 – R$ 12</td>
                 <td class="price-cell">R$ 22,00</td>
             </tr>
         </tbody>
     </table>
 
-    <!-- ========== FORNECEDORES ========== -->
-    <div class="section-heading">
-        <h2>Fornecedores em BH</h2>
-        <p>Melhores opções na região de Belo Horizonte para cada item do enxoval.</p>
-    </div>
 
-    <div class="suppliers-grid">
-        <!-- Camisas e Moletons -->
-        <div class="supplier-card">
-            <div class="supplier-cat">👕 Camisas & Moletons</div>
-            <div class="supplier-name">Dream Estamparia Digital</div>
-            <div class="supplier-detail">Sublimação, DTF, patches, canecas — um dos maiores de BH</div>
-        </div>
-        <div class="supplier-card">
-            <div class="supplier-cat">👕 Camisas & Moletons</div>
-            <div class="supplier-name">Mode Silk & Sublimação</div>
-            <div class="supplier-detail">Silk screen, sublimação — elogiado pelo atendimento</div>
-        </div>
-        <div class="supplier-card">
-            <div class="supplier-cat">👕 Camisas & Moletons</div>
-            <div class="supplier-name">BH Transfer</div>
-            <div class="supplier-detail">Barro Preto, BH — DTF, silk, digital — entrega rápida</div>
-            <span class="supplier-highlight">📍 Barro Preto</span>
-        </div>
-        <div class="supplier-card">
-            <div class="supplier-cat">👕 Camisas & Moletons</div>
-            <div class="supplier-name">Art Plus Camisetas</div>
-            <div class="supplier-detail">Produção própria — silk, bordado, sublimação — ótimo para moletons</div>
-        </div>
-
-        <!-- Distintivos -->
-        <div class="supplier-card">
-            <div class="supplier-cat">🏅 Distintivos / Patches</div>
-            <div class="supplier-name">SF Distintivos</div>
-            <div class="supplier-detail">sfdistintivos.com.br — especializado em escotismo!</div>
-            <span class="supplier-highlight">⭐ Especialista Escoteiro</span>
-        </div>
-        <div class="supplier-card">
-            <div class="supplier-cat">🏅 Distintivos / Patches</div>
-            <div class="supplier-name">BH Bordados</div>
-            <div class="supplier-detail">bhbordados.com.br — escala industrial, patches customizados</div>
-        </div>
-        <div class="supplier-card">
-            <div class="supplier-cat">🏅 Distintivos / Patches</div>
-            <div class="supplier-name">Eagle Patches</div>
-            <div class="supplier-detail">eaglepatches.com.br — termocolante, velcro, costura</div>
-        </div>
-
-        <!-- Canecas PP -->
-        <div class="supplier-card">
-            <div class="supplier-cat">☕ Canecas PP</div>
-            <div class="supplier-name">Dream Estamparia Digital</div>
-            <div class="supplier-detail">Canecas personalizadas por serigrafia e sublimação</div>
-        </div>
-        <div class="supplier-card">
-            <div class="supplier-cat">☕ Canecas PP</div>
-            <div class="supplier-name">Mode Silk & Sublimação</div>
-            <div class="supplier-detail">Copos e canecas de plástico personalizados</div>
-        </div>
-
-        <!-- Eco Copo -->
-        <div class="supplier-card">
-            <div class="supplier-cat">🥤 Eco Copo + Cordão</div>
-            <div class="supplier-name">Meu Copo Eco</div>
-            <div class="supplier-detail">meucopoeco.com.br — referência nacional em eco copos</div>
-            <span class="supplier-highlight">⭐ Referência Nacional</span>
-        </div>
-        <div class="supplier-card">
-            <div class="supplier-cat">🥤 Eco Copo + Cordão</div>
-            <div class="supplier-name">Eco Copo</div>
-            <div class="supplier-detail">ecocopo.com.br — copos reutilizáveis personalizados IML</div>
-        </div>
-        <div class="supplier-card">
-            <div class="supplier-cat">🥤 Eco Copo + Cordão</div>
-            <div class="supplier-name">Ecopulse</div>
-            <div class="supplier-detail">ecopulse.com.br — copos + cordões personalizados, envio nacional</div>
-        </div>
-        <div class="supplier-card">
-            <div class="supplier-cat">🥤 Eco Copo + Cordão</div>
-            <div class="supplier-name">Ecotevi</div>
-            <div class="supplier-detail">ecotevi.com.br — sistema completo eco copo + tirante</div>
-        </div>
-
-        <!-- Ecochila -->
-        <div class="supplier-card">
-            <div class="supplier-cat">🎒 Ecochila / Sacochila</div>
-            <div class="supplier-name">Criativa Brindes BH</div>
-            <div class="supplier-detail">Sacochilas personalizadas em TNT e algodão cru — BH</div>
-        </div>
-        <div class="supplier-card">
-            <div class="supplier-cat">🎒 Ecochila / Sacochila</div>
-            <div class="supplier-name">Loja Brindes BH</div>
-            <div class="supplier-detail">lojabrindesbh.com.br — Bairro Havaí — mochilas saco e brindes</div>
-            <span class="supplier-highlight">📍 Bairro Havaí</span>
-        </div>
-        <div class="supplier-card">
-            <div class="supplier-cat">🎒 Ecochila / Sacochila</div>
-            <div class="supplier-name">Company Print BH</div>
-            <div class="supplier-detail">companyprintbh.com.br — Centro (R. Rio Grande do Sul, 499)</div>
-        </div>
-        <div class="supplier-card">
-            <div class="supplier-cat">🎒 Ecochila / Sacochila</div>
-            <div class="supplier-name">Rkan Brindes</div>
-            <div class="supplier-detail">Sacochila, mochilas, brindes — preços competitivos para volume</div>
-        </div>
-    </div>
-
-    <!-- DICAS -->
-    <div class="tip-box">
-        <h3>💡 Dicas para Economizar</h3>
-        <ul>
-            <li>Peça orçamento de <strong>3+ fornecedores</strong> com as mesmas especificações.</li>
-            <li>Bairros <strong>Lagoinha, Barro Preto e Santa Efigênia</strong> em BH têm os melhores preços de confecção.</li>
-            <li>Mencione que é para <strong>evento escoteiro/juvenil sem fins lucrativos</strong> — muitos dão desconto.</li>
-            <li>Comprar tudo de <strong>um mesmo fornecedor</strong> dá margem para negociar pacote.</li>
-            <li>Abra uma <strong>pré-venda com 10% de desconto</strong> para levantar capital de produção.</li>
-            <li>Para eco copos, feche o pacote <strong>copo + cordão + anel já montado</strong>.</li>
-            <li>Envie artes <strong>vetorizadas</strong> (.AI, .CDR, .PDF) — evita custo extra de matriz.</li>
-            <li>Sacochilas de <strong>TNT</strong> são mais baratas (R$5-8/un), de <strong>algodão cru</strong> ficam mais premium (R$10-15/un).</li>
-        </ul>
-    </div>
-
-    <div class="warning-box">
-        ⚠️ <strong>Lembrete:</strong> A palavra "contingente" <strong>NÃO</strong> aparece em nenhuma peça ou material impresso.
-    </div>
 
     <!-- CTA -->
     <div class="cta-section">
-        <button class="btn" onclick="alert('Uai! Sistema de pré-venda em breve, sô! ☕')">
+        <a href="https://forms.gle/h5xsqPiQBAboqudr6" target="_blank" class="btn">
             Garantir meu Kit 🏔️
-        </button>
+        </a>
     </div>
 
 </div>
@@ -913,7 +835,7 @@
     <p class="footer-motto">2º MOOT Nacional Pioneiro 2026 • Escoteiros do Brasil • "Cê tá bão? Vambora pro MOOT, sô!"</p>
 </footer>
 
-<!-- ========== CAROUSEL JS ========== -->
+<!-- ========== CAROUSEL JS + TOUCH SUPPORT ========== -->
 <script>
 document.querySelectorAll('[data-carousel]').forEach(carousel => {
     const track = carousel.querySelector('.carousel-track');
@@ -930,6 +852,7 @@ document.querySelectorAll('[data-carousel]').forEach(carousel => {
     images.forEach((_, i) => {
         const dot = document.createElement('button');
         dot.classList.add('carousel-dot');
+        dot.setAttribute('aria-label', `Slide ${i + 1}`);
         if (i === 0) dot.classList.add('active');
         dot.addEventListener('click', () => goTo(i));
         navContainer.appendChild(dot);
@@ -947,6 +870,28 @@ document.querySelectorAll('[data-carousel]').forEach(carousel => {
     });
     carousel.querySelector('.carousel-btn.next')?.addEventListener('click', () => {
         goTo(currentIndex < images.length - 1 ? currentIndex + 1 : 0);
+    });
+
+    // Touch/swipe support for mobile
+    let startX = 0;
+    let endX = 0;
+    track.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    }, { passive: true });
+    track.addEventListener('touchmove', (e) => {
+        endX = e.touches[0].clientX;
+    }, { passive: true });
+    track.addEventListener('touchend', () => {
+        const diff = startX - endX;
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) {
+                // Swipe left — next
+                goTo(currentIndex < images.length - 1 ? currentIndex + 1 : 0);
+            } else {
+                // Swipe right — prev
+                goTo(currentIndex > 0 ? currentIndex - 1 : images.length - 1);
+            }
+        }
     });
 });
 </script>
